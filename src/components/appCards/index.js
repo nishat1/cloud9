@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import MediaCard from './MediaCard';
-import MediaCard2 from './MediaCard2';
-import CardMedia from '@material-ui/core/CardMedia';
-import Paper from '@material-ui/core/Paper';
 
 /*
     Styling for Grid based on Grid demo from MaterialUI.
@@ -39,12 +35,6 @@ class AppCards extends Component {
                     alignItems="center"
                 >
 
-                    {/* <Grid item xs={3}>
-                        <CardMedia
-                            style={{height: 100}}
-                            image="../../resources/images/dreamspace-3.png"
-                        />
-                    </Grid> */}
                     <Grid item xs={window.innerWidth < 600 ? 12 : 3}>
                         {/* <Paper> */}
                             <img 
@@ -64,6 +54,15 @@ class AppCards extends Component {
                             src={require("../../resources/images/dreamspace-1.png")}
                             style={{width: "100%"}}/>
                     </Grid>
+
+                
+                    <iframe 
+                        style={{
+                            margin: 0,
+                            padding: 0,
+                            border: "none"
+                        }}
+                        src="https://drive.google.com/file/d/1xWBJCKTpc26wbfExtRMXP3FKhexf0ccD/preview" width="640" height="480"></iframe>
 
                 </Grid>
             </div>
