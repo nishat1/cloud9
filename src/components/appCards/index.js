@@ -62,7 +62,8 @@ class AppCards extends Component {
                             padding: 0,
                             border: "none"
                         }}
-                        src="https://drive.google.com/file/d/1xWBJCKTpc26wbfExtRMXP3FKhexf0ccD/preview" width="640" height="480"></iframe>
+                        src="https://drive.google.com/file/d/1xWBJCKTpc26wbfExtRMXP3FKhexf0ccD/preview" width="640" height="480">
+                    </iframe>
 
                 </Grid>
             </div>
