@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import MediaCard from './MediaCard';
 import MediaCard2 from './MediaCard2';
+import CardMedia from '@material-ui/core/CardMedia';
+import Paper from '@material-ui/core/Paper';
 
 /*
     Styling for Grid based on Grid demo from MaterialUI.
@@ -24,6 +26,8 @@ class AppCards extends Component {
 
     render() {
 
+        console.log(window.innerWidth);
+
         return(
             <div className={this.props.classes.root}>
 
@@ -35,19 +39,27 @@ class AppCards extends Component {
                     alignItems="center"
                 >
 
-                    <Grid item xs={3}>
-                        <img 
-                            src={require("../../resources/images/dreamspace-3.png")}
-                            style={{width: "100%"}}/>
+                    {/* <Grid item xs={3}>
+                        <CardMedia
+                            style={{height: 100}}
+                            image="../../resources/images/dreamspace-3.png"
+                        />
+                    </Grid> */}
+                    <Grid item xs={window.innerWidth < 600 ? 12 : 3}>
+                        {/* <Paper> */}
+                            <img 
+                                src={require("../../resources/images/dreamspace-3.png")}
+                                style={{width: "100%"}}/>
+                        {/* </Paper> */}
                     </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={window.innerWidth < 600 ? 12 : 3}>
                         <img 
                             src={require("../../resources/images/dreamspace-2.png")}
                             style={{width: "100%"}}/>
                     </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={window.innerWidth < 600 ? 12 : 3}>
                         <img 
                             src={require("../../resources/images/dreamspace-1.png")}
                             style={{width: "100%"}}/>
