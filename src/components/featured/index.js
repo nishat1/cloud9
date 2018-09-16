@@ -11,9 +11,9 @@ const Featured = () => {
             <Carrousel/>
 
             <div className="card">
-
-                <AppCards />
-
+                <img 
+                    src={require("../../resources/images/cslogo.png")}
+                    style={{width: "100%"}}/>
             </div>
             
         </div>

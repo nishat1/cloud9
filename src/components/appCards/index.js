@@ -1,43 +1,62 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import MediaCard from './MediaCard';
+import MediaCard2 from './MediaCard2';
 
+/*
+    Styling for Grid based on Grid demo from MaterialUI.
+    touchAction used to disable double tap to zoom on IOS.
+    addcircleicon used to style add player button.
+*/
 const styles = theme => ({
   root: {
     flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
+    padding: 20,
+    touchAction: "manipulation",
+    background: "#2f2f2f",
+    // margin: 10
+  }
 });
 
-function AppCards(props) {
-  const { classes } = props;
+class AppCards extends Component {
 
-  return (
-    <div className={classes.root}>
-      <Grid container spacing={24}>
-        <Grid item xs>
-            <MediaCard />
-        </Grid>
-        <Grid item xs>
-            <MediaCard />
-        </Grid>
-        <Grid item xs>
-            <MediaCard />
-        </Grid>
-      </Grid>
-    </div>
-  );
+    render() {
+
+        return(
+            <div className={this.props.classes.root}>
+
+                {/* Grid object to hold every card */}
+                <Grid 
+                    container 
+                    spacing={24}
+                    justify="center"
+                    alignItems="center"
+                >
+
+                    <Grid item xs={3}>
+                        <img 
+                            src={require("../../resources/images/dreamspace-3.png")}
+                            style={{width: "100%"}}/>
+                    </Grid>
+
+                    <Grid item xs={3}>
+                        <img 
+                            src={require("../../resources/images/dreamspace-2.png")}
+                            style={{width: "100%"}}/>
+                    </Grid>
+
+                    <Grid item xs={3}>
+                        <img 
+                            src={require("../../resources/images/dreamspace-1.png")}
+                            style={{width: "100%"}}/>
+                    </Grid>
+
+                </Grid>
+            </div>
+        )
+    }
 }
-
-AppCards.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(AppCards);

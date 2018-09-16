@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 
 import unsplash from '../../resources/images/geran-de-klerk-148428-unsplash.jpg';
+import dreamspacelogo from '../../resources/images/dreamspacelogo.png';
+import clouds from '../../resources/images/clouds.jpg';
 import unsplash2 from '../../resources/images/boris-misevic-1057659-unsplash.jpg';
 
 class Carrousel extends Component {
@@ -30,7 +32,7 @@ class Carrousel extends Component {
                         <div 
                             className="carrousel_image"
                             style={{
-                                background: `url(${unsplash})`,
+                                background: `url(${clouds})`,
                                 height: `${window.innerHeight}px`
                             }}
                         ></div>
